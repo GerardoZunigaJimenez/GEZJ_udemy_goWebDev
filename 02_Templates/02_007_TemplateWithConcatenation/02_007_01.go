@@ -19,6 +19,6 @@ func main() {
 
 	fmt.Println(tpl)
 	/*
-	exec go run 02_017_01.go > index.html
+	exec go run 02_007_01.go > index.html
 	 */
 }
