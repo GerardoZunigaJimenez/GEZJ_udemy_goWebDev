@@ -2,8 +2,8 @@ package main
 
 import (
 	"html/template"
-	"log"
 	"net/http"
+	"log"
 )
 
 var tpl *template.Template
@@ -12,6 +12,10 @@ func init() {
 	tpl = template.Must(template.ParseGlob("templates/*.gohtml"))
 }
 
+/**
+go run 02_015_04.go
+localhost:8080
+ */
 func main() {
 
 	http.HandleFunc("/", index)

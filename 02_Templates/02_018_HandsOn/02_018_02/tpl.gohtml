@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{{range .}}
+<h1>Hotel:  {{.Name}}</h1>
+    <h2>Address: {{.Address}}</h2>
+        <h2>{{.City.Name}}, {{.City.State.Name}}, {{.City.State.Country.Name}}</h2>
+        <h2>{{.Zip}} - {{.Region}}</h2>
+{{end}}
+</body>
+</html>
