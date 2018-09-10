@@ -2,22 +2,25 @@ package main
 
 import (
 	"net"
-	"io/ioutil"
 	"log"
+	"io/ioutil"
 	"fmt"
 )
 
-func main(){
+/*
+go run "03_021.go"
+go run "03_024_01"
+ */
+func main() {
 	conn, err := net.Dial("tcp", "localhost:8080")
-	if err != nil{
-		panic(err)
+	if err != nil {
+		log.Fatalln(err)
 	}
-
 	defer conn.Close()
 
 	bs, err := ioutil.ReadAll(conn)
 	if err != nil {
-		log.Println(err)
+		log.Fatalln(err)
 	}
 
 	fmt.Println(string(bs))
